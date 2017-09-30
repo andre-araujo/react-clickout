@@ -13,5 +13,5 @@
         "linebreak-style": [0],
         "indent": [1, 4, { "SwitchCase": 1 }]
     },
-    "extends": "airbnb-base"
+    "extends": "airbnb"
 }
