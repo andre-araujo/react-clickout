@@ -7,10 +7,8 @@ class ClickOut extends Component {
         children: node.isRequired,
     }
 
-    static isOnClient = typeof window !== 'undefined'
-
     componentDidMount() {
-        if (this.isOnClient) {
+        if (typeof window !== 'undefined') {
             this.wrapper.addEventListener('click', this.onSelfClick);
             document.addEventListener('click', this.onAnyClick);
         }
