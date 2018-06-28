@@ -1,3 +1,6 @@
+## 1.0.4 (Jun 28, 2018)
+- Fix default import
+
 ## 1.0.0 (Jun 28, 2018)
 
 ### Fixes and critical changes:
