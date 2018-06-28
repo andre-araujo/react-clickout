@@ -1,66 +1,74 @@
 {
-  "name": "react-click-out",
-  "version": "0.1.2",
-  "description": "A react component to handle click out events",
-  "keywords": [
-    "react",
-    "reactjs",
-    "clickout",
-    "click-out",
-    "click",
-    "out"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/andre-araujo/react-clickout"
-  },
-  "author": "andre-araujo <andreluis9214@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "build": "./node_modules/.bin/babel src --out-dir ./dist",
-    "commit": "git-cz",
-    "lint:fix": "eslint ./src --fix",
-    "lint": "eslint ./src",
-    "test": "jest --no-cache",
-    "test:coverage": "jest --coverage"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.0.0",
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0",
-    "jest": "^21.1.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "jest": {
-    "verbose": true,
-    "transformIgnorePatterns": [
-      "/node_modules/"
+    "name": "react-click-out",
+    "version": "0.1.2",
+    "description": "A react component to handle click out events",
+    "keywords": [
+        "react",
+        "reactjs",
+        "clickout",
+        "click-out",
+        "click",
+        "out"
     ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 70,
-        "functions": 70,
-        "lines": 70,
-        "statements": 70
-      }
+    "author": "andre-araujo <andreluis9214@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/andre-araujo/react-clickout"
+    },
+    "main": "dist/index.js",
+    "umd:main": "dist/index.umd.js",
+    "module": "dist/index.m.js",
+    "source": "src/index.ts",
+    "scripts": {
+        "build": "microbundle build",
+        "dev": "microbundle watch",
+        "commit": "git-cz",
+        "lint:fix": "eslint ./src --fix",
+        "lint": "eslint ./src",
+        "test": "jest --no-cache",
+        "test:coverage": "jest --coverage"
+    },
+    "devDependencies": {
+        "@types/react": "^16.4.4",
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.0.1",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "commitizen": "^2.9.6",
+        "cz-conventional-changelog": "^2.0.0",
+        "eslint": "^4.3.0",
+        "eslint-config-airbnb": "^15.1.0",
+        "eslint-plugin-babel": "^4.1.2",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^5.1.1",
+        "eslint-plugin-react": "^7.1.0",
+        "jest": "^21.1.0",
+        "microbundle": "^0.4.4",
+        "react": "^16.4.1",
+        "typescript": "^2.9.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "jest": {
+        "verbose": true,
+        "transformIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 70,
+                "functions": 70,
+                "lines": 70,
+                "statements": 70
+            }
+        }
+    },
+    "peerDependencies": {
+        "react": "*"
     }
-  },
-  "dependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0"
-  }
 }

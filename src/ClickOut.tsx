@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { func, node } from 'prop-types';
+import * as React from 'react';
 
-class ClickOut extends Component {
-    static propTypes = {
-        callback: func.isRequired,
-        children: node.isRequired,
-    }
+interface Props {
+    onClickOut: (event: MouseEvent) => void
+    className: string
+}
+
+class ClickOut extends React.Component<Props> {
+    private wrapper: HTMLDivElement;
 
     componentDidMount() {
         if (typeof window !== 'undefined') {
@@ -26,18 +27,23 @@ class ClickOut extends Component {
     onAnyClick = (e) => {
         const {
             wrapper,
-            props: { callback },
+            props: {
+                onClickOut
+            },
         } = this;
 
         if (e.clickOutTarget !== wrapper) {
-            callback(e);
+            onClickOut && onClickOut(e);
         }
     }
 
     render() {
+        const { className } = this.props;
+
         return (
-            <div ref={(wrapper) => { this.wrapper = wrapper; }}>
-                { this.props.children }
+            <div ref={(wrapper) => { this.wrapper = wrapper; }
+            } className={className} >
+                {this.props.children}
             </div>
         );
     }

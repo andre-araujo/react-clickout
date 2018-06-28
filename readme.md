@@ -4,7 +4,9 @@ A simple component that triggers a callback function when click out.
 
 ## Usage
 
-Just import `ClickOut` component and pass a `function` as `callback` prop.
+Just import `ClickOut` component and pass a `function callback` as `onClickOut` prop.
+
+*Critical change - callback prop renamed to onClickOut*
 
 ```javascript
 import React, { Component } from 'react';
@@ -28,7 +30,7 @@ class App extends Component {
         return(
             <div>
                 <p style={{ color: clickedOut && 'red' }}>Hello</p>
-                <ClickOut callback={setClickOutState}>there!</ClickOut>
+                <ClickOut onClickOut={setClickOutState}>there!</ClickOut>
             </div>
         );
     }
