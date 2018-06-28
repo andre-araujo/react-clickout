@@ -1,6 +1,6 @@
 {
     "name": "react-click-out",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "description": "A react component to handle click out events",
     "keywords": [
         "react",
