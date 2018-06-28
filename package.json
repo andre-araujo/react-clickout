@@ -1,6 +1,6 @@
 {
     "name": "react-click-out",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "A react component to handle click out events",
     "keywords": [
         "react",
@@ -17,9 +17,6 @@
         "url": "https://github.com/andre-araujo/react-clickout"
     },
     "main": "dist/index.js",
-    "umd:main": "dist/index.umd.js",
-    "module": "dist/index.m.js",
-    "source": "src/index.ts",
     "scripts": {
         "build": "microbundle build",
         "dev": "microbundle watch",

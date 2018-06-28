@@ -5,8 +5,8 @@ interface Props {
     className: string
 }
 
-class ClickOut extends React.Component<Props> {
-    private wrapper: HTMLDivElement;
+class ClickOut extends React.Component<Props, {}> {
+    private wrapper: HTMLElement;
 
     componentDidMount() {
         if (typeof window !== 'undefined') {
@@ -38,13 +38,16 @@ class ClickOut extends React.Component<Props> {
     }
 
     render() {
-        const { className } = this.props;
+        const { className, children } = this.props;
 
         return (
-            <div ref={(wrapper) => { this.wrapper = wrapper; }
-            } className={className} >
-                {this.props.children}
-            </div>
+            React.createElement('div', {
+                ref: (wrapper) => {
+                    this.wrapper = wrapper;
+                },
+                children,
+                className
+            })
         );
     }
 }
