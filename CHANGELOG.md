@@ -1,3 +1,6 @@
+## 1.1.0 (Jul 02, 2018)
+- Add a `container` prop that changes the container element tag
+
 ## 1.0.4 (Jun 28, 2018)
 - Fix default import
 

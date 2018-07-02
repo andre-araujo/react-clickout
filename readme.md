@@ -1,4 +1,5 @@
 # React Click Out
+[![npm](https://img.shields.io/npm/dt/react-click-out.svg)](https://www.npmjs.com/package/react-click-out)
 
 A simple component that triggers a callback function when click out.
 
@@ -36,3 +37,11 @@ class App extends Component {
     }
 }
 ```
+
+## API Reference
+
+| prop | description | default |
+| --------- | ----------- | ----------- |
+| onClickOut | click out callback function | - |
+| className | className | - |
+| container | sets container element tag | div |
