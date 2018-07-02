@@ -2,11 +2,16 @@ import * as React from 'react';
 
 interface Props {
     onClickOut: (event: MouseEvent) => void
-    className: string
+    className: string,
+    container: string
 }
 
 class ClickOut extends React.Component<Props, {}> {
-    private wrapper: HTMLElement;
+    private wrapper: Element;
+
+    static defaultProps = {
+        container: 'div'
+    }
 
     componentDidMount() {
         if (typeof window !== 'undefined') {
@@ -38,10 +43,10 @@ class ClickOut extends React.Component<Props, {}> {
     }
 
     render() {
-        const { className, children } = this.props;
+        const { className, children, container } = this.props;
 
         return (
-            React.createElement('div', {
+            React.createElement(container, {
                 ref: (wrapper) => {
                     this.wrapper = wrapper;
                 },
